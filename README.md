@@ -33,7 +33,7 @@ A beautiful, mobile-responsive finance tracking application with a focus on simp
 
 ## 🎬 Demo
 
-[img]https://github.com/kinaksq/Trackt./blob/main/theme/dashboard.png[/img]
+![alt text](https://github.com/kinaksq/Trackt./blob/main/theme/dashboard.png)
 https://github.com/kinaksq/Trackt./blob/main/theme/settingsreen.png
 https://github.com/kinaksq/Trackt./blob/main/theme/budgets.png
 https://github.com/kinaksq/Trackt./blob/main/theme/splash.png
