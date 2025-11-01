@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - Fintech PWA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6EAD6E", // Main Brand Sage Green
+              "secondary": "#2D5F3F", // Secondary Forest Green
+              "accent": "#E07856", // Accent Terracotta
+              "destructive": "#E07856", // Using Accent Terracotta for destructive actions
+              // Light Mode Colors (kept for reference)
+              "background-light": "#FFF8F5",
+              "surface-light": "#FFFFFF",
+              "text-primary-light": "#2D3436",
+              "text-secondary-light": "#6B7280",
+              // Dark Mode Colors
+              "background-dark": "#0D1F12", // Dark Mode Background
+              "surface-dark": "#1A2E1F",    // Card Surface
+              "text-primary-dark": "#E8F5E9",     // Text
+              "text-secondary-dark": "#A8B8A9", // A lighter gray-green for secondary text
+              "border-dark": "#2D5F3F",      // Using Secondary Forest Green for borders
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "0.5rem", 
+                "lg": "0.75rem",
+                "xl": "1rem", 
+                "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex size-10 shrink-0 items-center justify-start text-text-primary-dark">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Settings</h1>
+<div class="flex w-10 items-center justify-end">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">Done</p>
+</div>
+</div>
+<main class="flex-grow p-4 space-y-8">
+<div class="flex w-full flex-col gap-4 sm:flex-row sm:items-center">
+<div class="flex gap-4 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-20 w-20 sm:h-24 sm:w-24 bg-gradient-to-br from-primary to-secondary" data-alt="User avatar placeholder with a sage to forest green gradient"></div>
+<div class="flex flex-col justify-center">
+<p class="text-xl sm:text-2xl font-bold leading-tight tracking-[-0.015em]">jane.doe@email.com</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="material-symbols-outlined text-primary text-base">sync</span>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">Last synced: Just now</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-1">Preferences</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-surface-dark shadow-sm shadow-black/20">
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">attach_money</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Currency</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<p class="text-text-secondary-dark text-base font-normal leading-normal">USD</p>
+<span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Dark Mode</p>
+</div>
+<div class="shrink-0">
+<div class="relative inline-flex cursor-pointer items-center">
+<input checked="" class="peer sr-only" id="dark-mode-toggle" type="checkbox"/>
+<div class="h-7 w-12 rounded-full bg-border-dark peer-checked:bg-primary"></div>
+<div class="absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition-transform peer-checked:translate-x-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">language</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Language</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<p class="text-text-secondary-dark text-base font-normal leading-normal">English</p>
+<span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-1">Data Management</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-surface-dark shadow-sm shadow-black/20">
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">upload_file</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Export Data</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">download</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Import Data</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">cloud_upload</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Backup to Cloud</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-1">About</h2>
+<div class="flex flex-col overflow-hidden rounded-xl bg-surface-dark shadow-sm shadow-black/20">
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">App Version</p>
+</div>
+<div class="shrink-0"><p class="text-text-secondary-dark text-base font-normal leading-normal">1.0.0</p></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Privacy Policy</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between border-b border-border-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Terms of Service</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-16 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/20 shrink-0 size-10">
+<span class="material-symbols-outlined">star</span>
+</div>
+<p class="text-base font-medium leading-normal flex-1 truncate">Rate App</p>
+</div>
+<div class="shrink-0"><span class="material-symbols-outlined text-text-secondary-dark text-xl">chevron_right</span></div>
+</div>
+</div>
+</div>
+<div class="space-y-4 pt-4">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] px-1 text-destructive">Danger Zone</h2>
+<div>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl border border-destructive px-4 py-3 text-base font-bold text-destructive transition-colors hover:bg-destructive/20 active:bg-destructive/30">
+<span class="material-symbols-outlined">delete_forever</span>
+                        Delete All Data
+                     </button>
+</div>
+</div>
+<div class="h-10"></div>
+</main>
+</div>
+
+</body></html>

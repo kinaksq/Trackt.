@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinTrack Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6EAD6E", // Main Brand Sage Green
+                        "secondary": "#2D5F3F", // Secondary Forest Green
+                        "accent": "#E07856", // Accent Terracotta
+                        "income": "#4CAF50", // Semantic Income Grass Green
+                        "expense": "#D84315", // Semantic Expense Clay Red
+                        // Dark Mode Palette
+                        "background-dark": "#0D1F12",
+                        "surface-dark": "#1A2E1F",
+                        "text-dark": "#E8F5E9",
+                        "text-secondary-dark": "rgba(232, 245, 233, 0.6)",
+                        "glass-bg-dark": "rgba(26, 46, 31, 0.5)",
+                        "glass-border-dark": "rgba(232, 245, 233, 0.1)",
+                        // Light Mode Palette (kept for potential toggle)
+                        "background-light": "#F7FBF7",
+                        "text-light": "#0D1F12",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    backdropBlur: {
+                        'xl': '20px',
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+       .dark body {
+            background-color: #0D1F12;
+            background-image: radial-gradient(circle at top left, rgba(110, 173, 110, 0.1), transparent 40%), 
+                              radial-gradient(circle at bottom right, rgba(224, 120, 86, 0.1), transparent 40%);
+        }
+        body {
+            background-color: #F7FBF7;}
+    </style>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-dark text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="sticky top-0 z-10 flex items-center bg-background-dark/80 backdrop-blur-xl p-4 pb-2 justify-between">
+<h2 class="text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1">FinTrack</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-text-dark">dark_mode</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl min-w-[15rem] p-4 bg-glass-bg-dark border border-glass-border-dark backdrop-blur-xl shadow-lg shadow-black/20">
+<div class="flex items-center justify-center size-10 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">Total Balance</p>
+<p class="text-text-dark text-2xl font-bold leading-tight">$12,850.75</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl min-w-[15rem] p-4 bg-glass-bg-dark border border-glass-border-dark backdrop-blur-xl shadow-lg shadow-black/20">
+<div class="flex items-center justify-center size-10 rounded-full bg-income/20 text-income">
+<span class="material-symbols-outlined">arrow_upward</span>
+</div>
+<div>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">This Month's Income</p>
+<p class="text-text-dark text-2xl font-bold leading-tight">$4,200.00</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-xl min-w-[15rem] p-4 bg-glass-bg-dark border border-glass-border-dark backdrop-blur-xl shadow-lg shadow-black/20">
+<div class="flex items-center justify-center size-10 rounded-full bg-expense/20 text-expense">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+<div>
+<p class="text-text-secondary-dark text-sm font-normal leading-normal">This Month's Expenses</p>
+<p class="text-text-dark text-2xl font-bold leading-tight">$1,850.25</p>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Spending Breakdown</h2>
+<div class="flex flex-col items-center justify-center gap-4 px-4 py-6">
+<div class="relative flex items-center justify-center size-48">
+<svg class="size-full" viewBox="0 0 36 36">
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="15.9155" stroke-dasharray="40, 60" stroke-width="3"></circle>
+<circle class="stroke-secondary origin-center -rotate-90" cx="18" cy="18" fill="none" r="15.9155" stroke-dasharray="25, 75" stroke-dashoffset="-40" stroke-width="3"></circle>
+<circle class="stroke-accent origin-center -rotate-90" cx="18" cy="18" fill="none" r="15.9155" stroke-dasharray="20, 80" stroke-dashoffset="-65" stroke-width="3"></circle>
+<circle class="stroke-yellow-600 origin-center -rotate-90" cx="18" cy="18" fill="none" r="15.9155" stroke-dasharray="15, 85" stroke-dashoffset="-85" stroke-width="3"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<p class="text-text-secondary-dark text-sm">Total Spent</p>
+<p class="text-text-dark text-2xl font-bold">$1,850.25</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-6 gap-y-3">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-primary"></div>
+<p class="text-text-secondary-dark text-sm">Groceries (40%)</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-secondary"></div>
+<p class="text-text-secondary-dark text-sm">Transport (25%)</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-accent"></div>
+<p class="text-text-secondary-dark text-sm">Entertainment (20%)</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-yellow-600"></div>
+<p class="text-text-secondary-dark text-sm">Bills (15%)</p>
+</div>
+</div>
+</div>
+<h2 class="text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recent Activity</h2>
+<div class="flex flex-col px-4 gap-3 pb-24">
+<div class="flex items-center gap-4 rounded-lg p-3 bg-surface-dark shadow-lg shadow-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-dark text-xl">🛒</div>
+<div class="flex-1">
+<p class="text-text-dark font-medium">Supermarket Run</p>
+<p class="text-text-secondary-dark text-sm">Nov 15</p>
+</div>
+<p class="font-semibold text-expense">-$85.50</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-surface-dark shadow-lg shadow-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-dark text-xl">🎵</div>
+<div class="flex-1">
+<p class="text-text-dark font-medium">Music Subscription</p>
+<p class="text-text-secondary-dark text-sm">Nov 14</p>
+</div>
+<p class="font-semibold text-expense">-$9.99</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-surface-dark shadow-lg shadow-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-dark text-xl">☕</div>
+<div class="flex-1">
+<p class="text-text-dark font-medium">Morning Coffee</p>
+<p class="text-text-secondary-dark text-sm">Nov 14</p>
+</div>
+<p class="font-semibold text-expense">-$4.75</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-surface-dark shadow-lg shadow-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-dark text-xl">🚇</div>
+<div class="flex-1">
+<p class="text-text-dark font-medium">Metro Pass</p>
+<p class="text-text-secondary-dark text-sm">Nov 13</p>
+</div>
+<p class="font-semibold text-expense">-$25.00</p>
+</div>
+<div class="flex items-center gap-4 rounded-lg p-3 bg-surface-dark shadow-lg shadow-black/20">
+<div class="flex size-10 items-center justify-center rounded-full bg-surface-dark text-xl">💼</div>
+<div class="flex-1">
+<p class="text-text-dark font-medium">Salary Deposit</p>
+<p class="text-text-secondary-dark text-sm">Nov 12</p>
+</div>
+<p class="font-semibold text-income">+$2,100.00</p>
+</div>
+</div>
+<button class="fixed bottom-6 right-6 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full bg-primary text-background-dark shadow-lg shadow-primary/40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+
+</body></html>

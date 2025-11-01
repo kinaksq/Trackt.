@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Monthly Budgets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#6EAD6E", // Main Brand Sage Green
+              "secondary": "#2D5F3F", // Secondary Forest Green
+              "accent": "#E07856", // Accent Terracotta
+              "surface": "#1A2E1F", // Card Surface
+              "background": "#0D1F12", // Dark Mode Background
+              "text-primary": "#E8F5E9", // Text
+              "text-secondary": "#A2BBAA", // Lighter text for secondary elements on dark bg (adjusted for new palette)
+              "income": "#4CAF50", // Income Grass Green
+              "expense": "#D84315", // Expense Clay Red
+              "warning": "#FFC107" // Warning Honey
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex items-center bg-background p-4 pb-2 justify-between sticky top-0 z-10 border-b border-white/10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-text-primary">
+                menu
+            </span>
+</div>
+<h2 class="text-text-primary text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Budgets</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-text-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">
+                    notifications
+                </span>
+</button>
+</div>
+</div>
+<div class="px-4 pt-6 pb-3">
+<h1 class="text-text-primary tracking-tight text-[32px] font-bold leading-tight text-left">Monthly Budgets</h1>
+<p class="text-text-secondary text-sm font-normal leading-normal pt-1">October 2024</p>
+</div>
+<div class="p-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl @md:flex-row @md:items-center bg-surface">
+<div class="flex-shrink-0 p-4 @md:p-6 flex items-center justify-center">
+<div class="relative size-32">
+<svg class="size-full" viewBox="0 0 36 36">
+<path class="stroke-current text-white/10" d="M18 2.0845
+                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                     a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+<path class="stroke-current text-primary" d="M18 2.0845
+                                     a 15.9155 15.9155 0 0 1 0 31.831
+                                     a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3" transform="rotate(90 18 18)"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold text-text-primary">85%</span>
+<span class="text-sm text-text-secondary">Spent</span>
+</div>
+</div>
+</div>
+<div class="flex w-full min-w-0 grow flex-col items-stretch justify-center gap-2 py-4 px-4 @md:px-2 @md:py-6">
+<p class="text-text-secondary text-sm font-normal leading-normal">Total Spent</p>
+<p class="text-text-primary text-2xl font-bold leading-tight tracking-[-0.015em]">$2,125.00</p>
+<p class="text-text-secondary text-base font-normal leading-normal">of $2,500 budget</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 px-4 py-4">
+<div class="flex items-center gap-4 bg-transparent py-3 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-lg bg-surface text-2xl">🛒</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-primary text-base font-medium leading-normal">Groceries</p>
+<p class="text-text-secondary text-sm font-normal leading-normal">$350 / $500</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-20 overflow-hidden rounded-full bg-white/10 h-2">
+<div class="h-full rounded-full bg-primary" style="width: 70%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent py-3 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-lg bg-surface text-2xl">🚗</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-primary text-base font-medium leading-normal">Transport</p>
+<p class="text-text-secondary text-sm font-normal leading-normal">$140 / $150</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-20 overflow-hidden rounded-full bg-white/10 h-2">
+<div class="h-full rounded-full bg-primary" style="width: 93%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent py-3 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-lg bg-surface text-2xl">🎬</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-primary text-base font-medium leading-normal">Entertainment</p>
+<p class="text-text-secondary text-sm font-normal leading-normal">$225 / $200</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-warning text-xl">
+                    warning
+                </span>
+<div class="w-20 overflow-hidden rounded-full bg-white/10 h-2">
+<div class="h-full rounded-full bg-warning" style="width: 100%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-transparent py-3 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center shrink-0 size-12 rounded-lg bg-surface text-2xl">🛍️</div>
+<div class="flex flex-1 flex-col justify-center">
+<p class="text-text-primary text-base font-medium leading-normal">Shopping</p>
+<p class="text-text-secondary text-sm font-normal leading-normal">$110 / $300</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-20 overflow-hidden rounded-full bg-white/10 h-2">
+<div class="h-full rounded-full bg-secondary" style="width: 36%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-4 mt-auto">
+<button class="flex w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-12 px-4 bg-primary text-background text-base font-bold leading-normal">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Add Budget</span>
+</button>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Transactions - FinTrack</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // New Light Mode Palette: Sustainable Sage
+                        "surface-linen": "#FAF7F0",
+                        "text-brown": "#3E2723",
+                        "text-brown-secondary": "#795548",
+                        "brand-sage": "#6EAD6E",
+                        "secondary-forest": "#2D5F3F",
+                        "accent-terracotta": "#E07856",
+                        "income-green": "#4CAF50",
+                        "expense-red": "#D84315",
+                        "surface-sage-light": "#E8F5E9",
+                        "border-forest-light": "#9CB8A5",
+                        // Dark Mode Palette (for reference, not active)
+                        "dark-background": "#0D1F12",
+                        "dark-surface": "#1A2E1F",
+                        "dark-text-primary": "#E8F5E9",
+                        "dark-text-secondary": "#9CB8A5",
+                        "dark-border": "#2D5F3F",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-linen font-display text-text-brown">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 bg-surface-linen/80 backdrop-blur-sm">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+</div>
+<h1 class="text-text-brown text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">All Transactions</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-secondary-rose gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-secondary-forest" style="font-size: 24px;">filter_list</span>
+</button>
+</div>
+</div>
+</header>
+<div class="px-4 pt-2 pb-4">
+<div class="flex gap-3 overflow-x-auto pb-2 -mb-2">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-brand-sage pl-4 pr-4 cursor-pointer">
+<p class="text-surface-linen text-sm font-medium leading-normal">All</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-sage-light border border-border-forest-light pl-4 pr-4 cursor-pointer">
+<p class="text-secondary-forest text-sm font-medium leading-normal">Income</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-sage-light border border-border-forest-light pl-4 pr-4 cursor-pointer">
+<p class="text-secondary-forest text-sm font-medium leading-normal">Expenses</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-sage-light border border-border-forest-light pl-4 pr-4 cursor-pointer">
+<p class="text-secondary-forest text-sm font-medium leading-normal">This Month</p>
+</div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-sage-light border border-border-forest-light pl-4 pr-4 cursor-pointer">
+<p class="text-secondary-forest text-sm font-medium leading-normal">Last 30 Days</p>
+</div>
+</div>
+</div>
+<main class="flex-grow px-4">
+<div class="sticky top-[72px] bg-surface-linen/80 backdrop-blur-sm z-10 -mx-4 px-4">
+<h2 class="text-text-brown-secondary text-sm font-bold leading-tight tracking-wide py-3 uppercase">Today</h2>
+</div>
+<div class="flex items-center gap-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-income-green/10 shrink-0 size-12">
+<span class="text-2xl">💼</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-brown text-base font-medium leading-normal line-clamp-1">Salary</p>
+<p class="text-text-brown-secondary text-sm font-normal leading-normal line-clamp-2">Acme Corp</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-income-green text-base font-medium leading-normal">+$5,250.00</p>
+<p class="text-text-brown-secondary text-xs font-normal leading-normal">10:30 AM</p>
+</div>
+</div>
+<div class="flex items-center gap-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-expense-red/10 shrink-0 size-12">
+<span class="text-2xl">🛒</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-brown text-base font-medium leading-normal line-clamp-1">Groceries</p>
+<p class="text-text-brown-secondary text-sm font-normal leading-normal line-clamp-2">Whole Foods</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-expense-red text-base font-medium leading-normal">-$85.50</p>
+<p class="text-text-brown-secondary text-xs font-normal leading-normal">09:15 AM</p>
+</div>
+</div>
+<div class="sticky top-[72px] bg-surface-linen/80 backdrop-blur-sm z-10 -mx-4 px-4">
+<h2 class="text-text-brown-secondary text-sm font-bold leading-tight tracking-wide py-3 uppercase">Yesterday</h2>
+</div>
+<div class="flex items-center gap-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-expense-red/10 shrink-0 size-12">
+<span class="text-2xl">☕️</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-brown text-base font-medium leading-normal line-clamp-1">Coffee</p>
+<p class="text-text-brown-secondary text-sm font-normal leading-normal line-clamp-2">Starbucks</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-expense-red text-base font-medium leading-normal">-$5.75</p>
+<p class="text-text-brown-secondary text-xs font-normal leading-normal">08:30 AM</p>
+</div>
+</div>
+<div class="flex items-center gap-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-expense-red/10 shrink-0 size-12">
+<span class="text-2xl">🚕</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-brown text-base font-medium leading-normal line-clamp-1">Ride Share</p>
+<p class="text-text-brown-secondary text-sm font-normal leading-normal line-clamp-2">Uber</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-expense-red text-base font-medium leading-normal">-$22.30</p>
+<p class="text-text-brown-secondary text-xs font-normal leading-normal">06:45 PM</p>
+</div>
+</div>
+<div class="sticky top-[72px] bg-surface-linen/80 backdrop-blur-sm z-10 -mx-4 px-4">
+<h2 class="text-text-brown-secondary text-sm font-bold leading-tight tracking-wide py-3 uppercase">October 15, 2023</h2>
+</div>
+<div class="flex items-center gap-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-full bg-accent-terracotta/10 shrink-0 size-12">
+<span class="text-2xl">🎬</span>
+</div>
+<div class="flex flex-col justify-center">
+<p class="text-text-brown text-base font-medium leading-normal line-clamp-1">Movie Tickets</p>
+<p class="text-text-brown-secondary text-sm font-normal leading-normal line-clamp-2">AMC Theaters</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-expense-red text-base font-medium leading-normal">-$32.00</p>
+<p class="text-text-brown-secondary text-xs font-normal leading-normal">08:00 PM</p>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
